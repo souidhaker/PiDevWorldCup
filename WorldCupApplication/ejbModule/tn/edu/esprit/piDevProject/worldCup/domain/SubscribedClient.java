@@ -7,9 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -23,7 +20,7 @@ public class SubscribedClient implements Serializable {
 	private String clientName;
 	private String clientLastName;
 	private String clientEmail;
-	private Date clientBirthDate;
+	private String clientBirthDate;
 	private String clientSex;
 	private String clientLogin;
 	private String clientPassword;
@@ -71,13 +68,12 @@ private List< SubscribedClientMatch> subscribedClientMatchs;
 	public void setClientEmail(String clientEmail) {
 		this.clientEmail = clientEmail;
 	}
-	@Temporal(TemporalType.DATE)
 
-	public Date getClientBirthDate() {
+	public String getClientBirthDate() {
 		return clientBirthDate;
 	}
 
-	public void setClientBirthDate(Date clientBirthDate) {
+	public void setClientBirthDate(String clientBirthDate) {
 		this.clientBirthDate = clientBirthDate;
 	}
 
@@ -107,7 +103,7 @@ private List< SubscribedClientMatch> subscribedClientMatchs;
 	
 	
 	public SubscribedClient(String clientName, String clientLastName,
-			String clientEmail, Date clientBirthDate, String clientSex,
+			String clientEmail, String clientBirthDate, String clientSex,
 			String clientLogin, String clientPassword) {
 		super();
 		this.clientName = clientName;

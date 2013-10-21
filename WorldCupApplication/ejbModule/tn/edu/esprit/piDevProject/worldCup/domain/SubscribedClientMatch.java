@@ -28,7 +28,6 @@ public class SubscribedClientMatch implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(insertable = false , updatable = false , name ="matchId" , referencedColumnName = "matchId")
-
 	public Match getMatch() {
 		return match;
 	}

@@ -2,7 +2,6 @@ package tn.edu.esprit.piDevProject.worldCup.domain;
 
 import java.io.Serializable;
 import java.lang.String;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.*;
@@ -18,7 +17,7 @@ public class Match implements Serializable {
 	
 	private int matchId;
 	private String matchReferee;
-	private Date matchDate;
+	private String matchDate;
 	private String matchCategory;
 	private String matchStadium;
 	private static final long serialVersionUID = 1L;
@@ -28,7 +27,7 @@ private List<SubscribedClientMatch> subscribedClientMatchs;
 	}   
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
+	@Column(name="matchId")
 	public int getMatchId() {
 		return this.matchId;
 	}
@@ -43,12 +42,12 @@ private List<SubscribedClientMatch> subscribedClientMatchs;
 	public void setMatchReferee(String matchReferee) {
 		this.matchReferee = matchReferee;
 	}   
-	@Temporal(TemporalType.DATE)
-	public Date getMatchDate() {
+	
+	public String getMatchDate() {
 		return this.matchDate;
 	}
 
-	public void setMatchDate(Date matchDate) {
+	public void setMatchDate(String matchDate) {
 		this.matchDate = matchDate;
 	}   
 	public String getMatchCategory() {
@@ -65,7 +64,7 @@ private List<SubscribedClientMatch> subscribedClientMatchs;
 	public void setMatchStadium(String matchStadium) {
 		this.matchStadium = matchStadium;
 	}
-	public Match(String matchReferee, Date matchDate, String matchCategory,
+	public Match(String matchReferee, String matchDate, String matchCategory,
 			String matchStadium) {
 		super();
 		this.matchReferee = matchReferee;

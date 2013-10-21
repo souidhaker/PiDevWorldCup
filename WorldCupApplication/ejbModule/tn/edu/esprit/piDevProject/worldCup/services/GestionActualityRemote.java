@@ -10,7 +10,7 @@ import tn.edu.esprit.piDevProject.worldCup.domain.Actuality;
 public interface GestionActualityRemote {
 public void createActuality(Actuality actuality);
 public void updateActuality(Actuality actuality);
-public void deleteActuality(Actuality actuality);
+public void deleteActuality(int i);
 public Actuality getActualityById(int actualityId);
 public List<Actuality> getAllActuality();
 }

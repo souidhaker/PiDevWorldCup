@@ -51,4 +51,9 @@ public class GestionActuality implements GestionActualityRemote, GestionActualit
 		return query.getResultList();
 	}
 
+	@Override
+	public void deleteActuality(int i) {
+		
+	}
+
 }

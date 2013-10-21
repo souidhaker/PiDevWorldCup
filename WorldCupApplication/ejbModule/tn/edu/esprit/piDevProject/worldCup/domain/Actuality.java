@@ -21,7 +21,7 @@ public class Actuality implements Serializable {
 	
 	private int actualityId;
 	private String actualityTitle;
-	private Date actualityDate;
+	private String actualityDate;
 	private static final long serialVersionUID = 1L;
 	private ChiefEditor chiefEditor;
 	private List<SubscribedClientActuality> subscribedClientActuality;
@@ -44,15 +44,15 @@ public class Actuality implements Serializable {
 	public void setActualityTitle(String actualityTitle) {
 		this.actualityTitle = actualityTitle;
 	}   
-	@Temporal(TemporalType.DATE)
-	public Date getActualityDate() {
+
+	public String getActualityDate() {
 		return this.actualityDate;
 	}
 
-	public void setActualityDate(Date actualityDate) {
+	public void setActualityDate(String actualityDate) {
 		this.actualityDate = actualityDate;
 	}
-	public Actuality( String actualityTitle, Date actualityDate) {
+	public Actuality( String actualityTitle, String actualityDate) {
 		super();
 		
 		this.actualityTitle = actualityTitle;

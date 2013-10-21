@@ -16,12 +16,17 @@ public class SubscribedClientMatchPK implements Serializable {
 
 	private int matchId;
 	private int clientId;
+	
+	
+	
 	public int getMatchId() {
 		return matchId;
 	}
 	public void setMatchId(int matchId) {
 		this.matchId = matchId;
 	}
+	
+	
 	public int getClientId() {
 		return clientId;
 	}
@@ -51,6 +56,10 @@ public class SubscribedClientMatchPK implements Serializable {
 			return false;
 		return true;
 	}
+	
+	
+	
+	
 	
 	
 
