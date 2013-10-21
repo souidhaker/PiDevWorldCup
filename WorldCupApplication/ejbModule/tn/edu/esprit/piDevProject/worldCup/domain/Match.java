@@ -10,7 +10,7 @@ import javax.persistence.*;
  * Entity implementation class for Entity: Match
  *
  */
-@Entity
+@Entity(name="matche")
 
 public class Match implements Serializable {
 
