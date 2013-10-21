@@ -13,6 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="lib/jboss-client.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/tn.edu.esprit.piDevProjet.worldCup"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/WorldCupApplication"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

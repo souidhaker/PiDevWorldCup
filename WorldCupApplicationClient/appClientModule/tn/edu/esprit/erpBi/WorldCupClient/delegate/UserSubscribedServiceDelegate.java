@@ -1,8 +1,5 @@
 package tn.edu.esprit.erpBi.WorldCupClient.delegate;
 
-import tn.edu.esprit.erpBi.WorldCupClient.locator.ServiceLocator;
-import tn.edu.esprit.piDevProjet.worldCup.domain.SubscribedClient;
-import tn.edu.esprit.piDevProjet.worldCup.services.SubscribedClientServicesRemote;
 
 public class UserSubscribedServiceDelegate {
 
