@@ -8,6 +8,29 @@
 	<class>tn.edu.esprit.piDevProject.worldCup.domain.SubscribedClientMatchPK</class>
 	<class>tn.edu.esprit.piDevProject.worldCup.domain.SubscribedClientProductPK</class>
 	<class>tn.edu.esprit.piDevProject.worldCup.domain.SubscribedClientTeamPK</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.Player</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.CollectionAgent</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.MicroEvent</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.Interview</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.Photo</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.Match</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.SubscribedClientMatch</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.SubscribedClient</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.SubscribedClientProduct</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.Gift</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.Actuality</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.Product</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.Video</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.Team</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.SubscribedClientActuality</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.Administrator</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.Ads</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.News</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.SubscribedClientTeam</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.Ticket</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.Gallery</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.ChiefEditor</class>
+	<class>tn.edu.esprit.piDevProject.worldCup.domain.SubscribedClientGallery</class>
 	
 	<properties>
 	

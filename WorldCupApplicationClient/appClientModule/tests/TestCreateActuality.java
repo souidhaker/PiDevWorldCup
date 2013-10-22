@@ -23,13 +23,13 @@ public class TestCreateActuality {
 		ActualityServiceDeligate delege = null;
 		Actuality actuality = new Actuality();
 		// actuality.setIdActuality(1);
-		actuality.setActualityTitle("marwen");
-		actuality.setActualityDate("11/11/2011");
+		actuality.setActualityTitle("walid");
+		actuality.setActualityDate("6/8/2041");
 		delege.createActuality(actuality);
 		
 		InterviewServiceDelegate delege1 = null;
 		Interview interview = new Interview();
-		interview.setInterviewdPlayer("carlos");
+		interview.setInterviewdPlayer("ronaldo");
 		delege1.createInterview(interview);
 		
 		NewsServiceDeligate delege2 = null;
