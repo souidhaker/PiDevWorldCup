@@ -1,14 +1,23 @@
 package worldCup.group4.clientProject.GUI;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Properties;
 
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -16,6 +25,7 @@ import javax.swing.border.EmptyBorder;
 
 import tn.edu.esprit.piDevProject.worldCup.domain.SubscribedClient;
 import worldCup.group4.clientProject.deligate.SubscribedClientServiceDelegate;
+
 
 public class SubscribsribeClient extends JFrame {
 
@@ -52,46 +62,48 @@ public class SubscribsribeClient extends JFrame {
 	 * Create the frame.
 	 */
 	public SubscribsribeClient() {
+		setForeground(Color.GREEN);
+		setTitle("Subscribe Client");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 336, 335);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		mail = new JTextField();
-		mail.setBounds(132, 77, 86, 20);
+		mail.setBounds(132, 77, 138, 24);
 		contentPane.add(mail);
 		mail.setColumns(10);
 		
 		name = new JTextField();
-		name.setBounds(132, 11, 86, 20);
+		name.setBounds(132, 11, 138, 24);
 		contentPane.add(name);
 		name.setColumns(10);
 		
 		lastename = new JTextField();
-		lastename.setBounds(132, 46, 86, 20);
+		lastename.setBounds(132, 46, 138, 24);
 		contentPane.add(lastename);
 		lastename.setColumns(10);
 		
 		birthday = new JTextField();
-		birthday.setBounds(132, 108, 86, 20);
+		birthday.setBounds(132, 108, 138, 24);
 		contentPane.add(birthday);
 		birthday.setColumns(10);
 		
 		login = new JTextField();
-		login.setBounds(132, 139, 86, 20);
+		login.setBounds(132, 139, 138, 24);
 		contentPane.add(login);
 		login.setColumns(10);
 		
 		password = new JPasswordField();
-		password.setBounds(132, 170, 86, 20);
+		password.setBounds(132, 170, 138, 24);
 		contentPane.add(password);
 		password.setColumns(10);
 		
 		final JComboBox sexe = new JComboBox();
 		sexe.setModel(new DefaultComboBoxModel(new String[] {"Homme", "Femme"}));
-		sexe.setBounds(132, 201, 62, 20);
+		sexe.setBounds(132, 201, 138, 20);
 		contentPane.add(sexe);
 		
 		JLabel lblNewLabel = new JLabel("Name");
@@ -146,11 +158,60 @@ public class SubscribsribeClient extends JFrame {
 				delegate.createSubscribedClient(client);
 				
 				
+				//mail 
+				final String username = "houssembenali90@gmail.com";
+				final String password = "coccinel89";
+		 
+				Properties props = new Properties();
+				props.put("mail.smtp.auth", "true");
+				props.put("mail.smtp.starttls.enable", "true");
+				props.put("mail.smtp.host", "smtp.gmail.com");
+				props.put("mail.smtp.port", "587");
+		 
+				Session session = Session.getInstance(props,
+				  new javax.mail.Authenticator() {
+					protected PasswordAuthentication getPasswordAuthentication() {
+						return new PasswordAuthentication(username, password);
+					}
+				  });
+		 
+				try {
+		 
+					Message message = new MimeMessage(session);
+					message.setFrom(new InternetAddress("houssembenali90@gmail.com"));
+					message.setRecipients(Message.RecipientType.TO,
+						InternetAddress.parse("houssem.benali@esprit.tn"));
+					message.setSubject("subscribe succsessfull");
+					message.setText("Dear "+nameparm+" "+lastNameparm+","
+						+ "\n\n Thanks for using our application! "
+							+"\n your registration information are below !!"
+						+"Login :"+loginparm
+						+"\n Password"+passwordparm
+						+"\n\n For more information contact us on brazil@worldcup.com");
+		 
+					Transport.send(message);
+					JOptionPane.showMessageDialog(contentPane,
+							"Thank you for your subscribing in Live World Cup ! \n a mail has sended to you contain your account information  \n  ");
+		 
+				} catch (Exception e1) {
+					JOptionPane.showMessageDialog(contentPane,
+							"Error while sending mail!! \n please verify your internet connection !");
+				}
+				
+				
 
 				
 			}
 		});
-		btnSubscribe.setBounds(202, 228, 89, 23);
+		btnSubscribe.setBounds(44, 232, 109, 47);
 		contentPane.add(btnSubscribe);
+		
+		JButton btnNewButton = new JButton("Cancel");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setBounds(163, 232, 107, 47);
+		contentPane.add(btnNewButton);
 	}
 }

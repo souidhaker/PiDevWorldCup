@@ -24,6 +24,19 @@ public class MicroEvent implements Serializable {
 		super();
 	}
 	
+	
+	
+	public MicroEvent(int idEvent, String nameEvent, int timeEvent,
+			String typeEvent) {
+		super();
+		this.idEvent = idEvent;
+		this.nameEvent = nameEvent;
+		this.timeEvent = timeEvent;
+		this.typeEvent = typeEvent;
+	}
+
+
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	

@@ -3,6 +3,7 @@ package tn.edu.esprit.piDevProject.worldCup.domain;
 import java.io.Serializable;
 import java.lang.String;
 import java.util.List;
+import javax.mail.util.*;
 
 import javax.persistence.*;
 
